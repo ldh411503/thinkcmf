@@ -1,0 +1,33 @@
+<include file="public@header" />
+</head>
+<body>
+	<div class="wrap">
+		<ul class="nav nav-tabs">
+			<li><a href="{:url('pagegoods/index')}">商品列表</a></li>
+			<li class="active"><a href="{:url('pagegoods/add')}">添加商品</a></li>
+		</ul>
+		<form method="post" class="form-horizontal  margin-top-20" action="{:url('pagegoods/add')}">
+			<div class="form-group">
+				<label for="input-user_login" class="col-sm-2 control-label"><span class="form-required">*</span>商品名</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control"  name="name">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-user_login" class="col-sm-2 control-label"><span class="form-required">*</span>路径</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control"  name="controller">
+				</div>
+			</div>
+		
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<button type="submit" class="btn btn-primary">提交</button>
+				</div>
+
+			</div>
+		</form>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+</body>
+</html>

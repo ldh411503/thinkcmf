@@ -1,0 +1,45 @@
+<include file="public@header" />
+</head>
+<body>
+	<div class="wrap js-check-wrap">
+		<ul class="nav nav-tabs">
+			 <foreach name='goods' item="g">
+				<li <eq name='gid' value="$g['id']"> class="active" </eq>><a href="{:url('visitLog/index',array('gid'=>$g['id']))}">{$g['name']}</a></li>
+				
+			</foreach>
+		</ul>
+       <!--  <form class="well form-inline margin-top-20" method="post" action="{:url('Goods/index')}">
+            商品名:
+            <input type="text" class="form-control" name="name" style="width: 120px;" value="{:input('name')}" placeholder="请输入商品名">
+           
+            <input type="submit" class="btn btn-primary" value="搜索" />
+            <a class="btn btn-danger" href="{:url('Goods/index')}">清空</a>
+        </form> -->
+		<table class="table table-hover table-bordered">
+			<thead>
+				<tr>
+					<th>id</th>
+					<th>ip</th>
+					
+					
+					<th>访问时间</th>
+		
+				</tr>
+			</thead>
+			<tbody>
+				<foreach name='list' item='v'>
+					<tr>
+						<td>{$v['id']}</td>
+						<td>{$v['ip']}</td>
+						<td>{$v['addtime']|date="Y-m-d H:i:s",###}</td>
+						
+					</tr>
+
+				</foreach>
+			</tbody>
+		</table>
+		<div class="pagination">{$page}</div>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+</body>
+</html>

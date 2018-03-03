@@ -1,0 +1,27 @@
+/* CSS Document */
+body{ background-color:#0D6D3A;}
+*{ padding:0px; margin:0px;}
+img{ display:block;}
+
+.p {
+     background:url("ghyjdry_15.jpg")/*tpa=http://yym.lzyclub.cn/images/ghyjdry_15.jpg*/;	
+     height:320px;
+     width:1022px;
+}
+.mini_nav {
+    /* background-position: left -126px;   
+    background-repeat: repeat-x;*/
+    bottom: 0;
+    height: 50px;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+}
+.mini_nav_info {
+    margin: 0 auto;
+    width: 100%;
+/*
+    margin-left:212px;*/
+
+}

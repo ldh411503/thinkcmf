@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<link href="css/public.css" tppabs="http://yym.lzyclub.cn/jdyuj/images3/public.css"   rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/1.js" tppabs="http://yym.lzyclub.cn/jdyuj/1.js" ></script>
+<style type="text/css">
+<!--
+.kda{width:280px;}
+.kdb{width:400px;}
+#wforder{width:924px;}
+.wforderl{width:580px;}
+#wforder,.wforderl,.wforderr{height:530px;}
+#wforder,.wftitle,.wforderr{border-color:#b17249;}
+.bdbox li{width:580px;}
+.bdbox li span.bdl{width:80px;}
+.bdbox li span.bdr{width:480px;}
+.bdbox li.product{height:85px;}
+.bdbox li.shsj{height:62px;}
+.bdbox li.pay{height:75px;}
+.bdbox li.guest{height:64px;}
+.bdbox li span.bdr textarea.guest{height:40px;}
+#wffahuo{height:335px;}
+
+</style>
+</head>
+<body>
+<script language="JavaScript">
+function checkform() {
+    if (document.form.name.value == "") {
+        alert("请填写您的收货人姓名！");
+		document.form.name.focus();
+		return false;
+    }
+
+
+
+	if (document.form.phone.value == "" && document.form.tel.value == ""){
+		alert('请填写手机号码或者电话号码！');
+		document.form.phone.focus();
+		return false;
+	}	
+	
+
+	if(document.form.phone.value){
+		var reg = /^1[3,4,5,7,8]\d{9}$/;
+		if (!reg.test(document.form.phone.value)){
+			alert('请填写正确的手机号码');
+			document.form.phone.focus();
+			return false;
+		}
+	}
+
+	if(document.form.tel.value)
+	{
+		var str = document.form.tel.value;
+		var Expression = /(\d{3}-)(\d{8})$|(\d{4}-)(\d{7})$/;
+		var objExp = new RegExp(Expression);
+		if(!objExp.test(str)){
+		  alert('电话号码不正确');
+		}
+	}
+
+
+	if (document.form.province.value == "") {
+        alert("请选择省份！");
+        return false;
+    }
+	
+	if (document.form.city.value == "") {
+        alert("请选择市！");
+        return false;
+    }
+	
+	if (document.form.area.value == "") {
+        alert("请选择区！");
+        return false;
+    }
+	 if (document.form.address.value == "") {
+        alert("请填写您的收货地址！");
+		document.form.address.focus();
+		return false;
+    }
+	
+    return true;
+}
+</script>
+
+<div id="wforder">
+    <div class="wforderl">
+    <form id="form" name="form" action="/portal/pagegoods/addpost.html" method="post" onsubmit="return checkform()" >
+    <!-- <form id="form" name="form" action="http://zl.liudenghui.xin/portal/pagegoods/addpost.html" method="post" onsubmit="return checkform()" > -->
+			<div class="wftitle"><img src="images/tita.gif"  /></div>
+			<div class="bdbox">
+			    <ul>
+					<li class="product">
+					    <span class="bdl"><em>*</em><script type="text/javascript">document.write(text1);</script></span>
+						<span class="bdr red">
+
+						    <input type="radio" id="ab" name="productTitle" value=""  class="dxk" /><script type="text/javascript">document.write(text2);</script><br />
+						    <input type="radio" checked id="ac" name="productTitle"  value="" class="dxk" /><script type="text/javascript">document.write(text3);</script><br />
+						    <input type="radio" id="ad" name="productTitle"  value=""  class="dxk" /><script type="text/javascript">document.write(text4);</script><br />
+							<input type="radio" id="ae" name="productTitle"  value=""  class="dxk" /><script type="text/javascript">document.write(text15);</script><br />
+					<script>
+					document.getElementById("ab").value = "阿拉伯AVENA血钻野燕麦 (一周期疗效体验装) 2盒送2盒共4盒 6838元";
+					document.getElementById("ac").value = "阿拉伯AVENA血钻野燕麦 (两周期激情强效装) 4盒送4盒共8盒 1260元";
+					document.getElementById("ad").value = "阿拉伯AVENA血钻野燕麦 (三周期完美巩固装) 6盒送6盒共12盒 1760元";
+					document.getElementById("ae").value = "阿拉伯AVENA血钻野燕麦 (四周期完美强化装) 8盒送8盒共16盒 2180元";
+					</script>
+						</span>
+					</li>
+					<li><span class="bdl"><em>*</em><script type="text/javascript">document.write(text5);</script></span><span class="bdr"><input type="text" name="name" class="txt kda" /></span></li>
+					<li><span class="bdl"><em>*</em><script type="text/javascript">document.write(text6);</script></span><span class="bdr"> <input type="text" name="phone" class="txt kda" /></span></li>
+					<li><span class="bdl"><script type="text/javascript">document.write(text7);</script></span><span class="bdr"><input type="text" name="tel" class="txt kda" /></span></li>
+					<li><span class="bdl"><em>*</em><script type="text/javascript">document.write(text8);</script></span><span class="bdr"><select name="province"></select> <select name="city"></select> <select name="area"></select></span></li>
+					<li><span class="bdl"><em>*</em><script type="text/javascript">document.write(text9);</script></span><span class="bdr"><input type="text" name="address" class="txt kdb" /></span></li>
+										<li class="pay">
+					    <span class="bdl"><em>*</em><script type="text/javascript">document.write(text10);</script></span>
+						<span class="bdr">
+						    <div class="payaa">
+						        <input type="radio" checked="checked" name="payment" id="paytypea" value="1" onclick="return changeItem(0);" class="dxk" /><label><script type="text/javascript">document.write(text11);</script></label>
+								
+					
+    </div>
+						    <div id="paydiv0" class="paybb kdb">
+						        <p><script type="text/javascript">document.write(text12);</script></p>
+						       						    </div>
+					    </span>
+				    </li>
+				    <li class="guest"><span class="bdl"><script type="text/javascript">document.write(text13);</script></span><span class="bdr"><textarea name="content" class="guest kdb"></textarea></span></li>
+
+					<li class="next"><input type="submit" name="submit" value="确认提交" class="send suba"  style="background-image:url(images/suba.gif)" /><input type="reset" name="reset" value="重新填写" class="send subb"  style="background-image:url(images/subb.gif)" /></li>
+				</ul>
+			</div>
+		</form>
+	</div>
+	<div class="wforderr">
+	    <div class="wftitle"><img src="images/fhtit.gif" tppabs="http://yym.lzyclub.cn/jdyuj/images3/fhtit.gif"   /></div>
+		<div id="wffahuo" style="overflow:hidden;">
+		    <div id="wffahuo1" style="overflow:hidden;"><script type="text/javascript" src="js/fahuo.js" tppabs="http://yym.lzyclub.cn/jdyuj/images3/fahuo.js"  ></script></div>
+			<div id="wffahuo2"></div>
+		</div>
+		<div style="width:290px;height:128px;overflow:hidden;"><img src="images/tubiao.gif"    width="290" height="128" /></div>
+		<script type="text/javascript">
+		    var speeds=30;
+			var wffahuo=document.getElementById('wffahuo');
+			var wffahuo1=document.getElementById('wffahuo1');
+			var wffahuo2=document.getElementById('wffahuo2');
+			wffahuo2.innerHTML=wffahuo1.innerHTML
+			function Marquee1(){
+			    if(wffahuo2.offsetHeight-wffahuo.scrollTop<=0)
+				wffahuo.scrollTop-=wffahuo1.offsetHeight
+				else{
+				    wffahuo.scrollTop++
+				}
+			}
+			var MyMar1=setInterval(Marquee1,speeds)
+			wffahuo.onmouseover=function(){
+			    clearInterval(MyMar1)
+			}
+			wffahuo.onmouseout=function(){
+			    MyMar1=setInterval(Marquee1,speeds)
+			}
+		</script>
+	</div>
+</div>
+<script type="text/javascript" src="js/wfdq.js" tppabs="http://yym.lzyclub.cn/jdyuj/images3/wfdq.js" ></script>
+<script language="javascript" defer>new PCAS("province","city","area");</script>
+<!-- 
+</body>
+</html> -->

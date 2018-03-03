@@ -1,0 +1,53 @@
+<include file="public@header" />
+</head>
+<body>
+	<div class="wrap">
+		<ul class="nav nav-tabs">
+			<li><a href="#">商品修改</a></li>
+			
+		</ul>
+		<form method="post" class="form-horizontal js-ajax-form margin-top-20" action="{:url('goods/edit')}">
+		<input type="hidden" name="id" value="{$goods.id}">
+			<div class="form-group">
+				<label for="input-user_login" class="col-sm-2 control-label"><span class="form-required">*</span>商品名</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-user_login" name="name" value="{$goods.name}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-user_pass" class="col-sm-2 control-label"><span class="form-required">*</span>备注</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control"  name="bz" value="{$goods.bz}" >
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-user_email" class="col-sm-2 control-label"><span class="form-required">*</span>进货价</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-user_email" name="buyprice" value="{$goods.buyprice}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-user_email" class="col-sm-2 control-label"><span class="form-required">*</span>售价</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-user_email" name="sellingprice" value="{$goods.sellingprice}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-user_email" class="col-sm-2 control-label"><span class="form-required">*</span>状态</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="radio" name="state" value='2' <eq name="$goods.state" value='2'> checked</eq>> 正常
+					<input type="radio" name="state" value='1'  <eq name="$goods.state" value='1'> checked</eq>> 下架
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<button type="submit" class="btn btn-primary">提交</button>
+				</div>
+
+			</div>
+		</form>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+</body>
+</html>
